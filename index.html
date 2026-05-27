@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Script Sense → Xero</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #1a1a1a; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    code { background: #f2f2f2; padding: 0.1rem 0.3rem; border-radius: 3px; }
+    .updated { color: #666; font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+    th { background: #f7f7f7; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — Script Sense → Xero browser extension</h1>
+  <p class="updated">Last updated: 27 May 2026</p>
+
+  <p>
+    This Chrome extension ("the extension") lets a Script Sense user push their monthly
+    account charges from Script Sense into Xero as invoices. It is provided by
+    Kieran Erasmuson ("the developer", "we", "us"). This policy explains what data the
+    extension handles, where that data goes, and how it is stored.
+  </p>
+
+  <h2>The short version</h2>
+  <p>
+    The extension runs entirely inside your browser. It communicates only with two
+    services that <strong>you</strong> connect: the Script Sense platform and Xero.
+    It does <strong>not</strong> send any of your data to the developer, and there are
+    no analytics, advertising, or third-party tracking of any kind. We never see,
+    receive, or store your data on our own servers — we operate none.
+  </p>
+
+  <h2>What data the extension accesses</h2>
+  <table>
+    <tr><th>Data</th><th>Source</th><th>Why</th></tr>
+    <tr>
+      <td>Your Script Sense session token</td>
+      <td>Read from the authenticated request your browser already makes to Script Sense, while you have Script Sense open and logged in.</td>
+      <td>To call the Script Sense API on your behalf to read your billing data. It is the same access you already have when logged in.</td>
+    </tr>
+    <tr>
+      <td>Billing / debtor data: account names, bill IDs, dates, amounts, line-item descriptions, quantities and prices</td>
+      <td>The Script Sense API.</td>
+      <td>To show you which debtors have outstanding charges and to build the corresponding Xero invoices.</td>
+    </tr>
+    <tr>
+      <td>Xero access and refresh tokens, and your Xero organisation (tenant) ID</td>
+      <td>Xero's OAuth 2.0 sign-in, which you complete yourself in a Xero-hosted window.</td>
+      <td>To create contacts and invoices in your Xero organisation on your behalf.</td>
+    </tr>
+    <tr>
+      <td>Xero contacts, tax rates, and revenue accounts</td>
+      <td>The Xero API.</td>
+      <td>To match Script Sense accounts to Xero contacts and to let you choose the correct account code and tax rate.</td>
+    </tr>
+  </table>
+
+  <h2>What the extension writes</h2>
+  <ul>
+    <li><strong>To Xero:</strong> it creates contacts and invoices that you have selected, and (optionally) emails those invoices through Xero.</li>
+    <li><strong>To Script Sense:</strong> it marks the bills you have invoiced as "Sent", so they are not invoiced twice.</li>
+  </ul>
+
+  <h2>Where data is stored</h2>
+  <ul>
+    <li>
+      Your <strong>Script Sense session token</strong> is held only in your browser's
+      <em>session</em> storage. It is cleared automatically when you close your browser
+      and is never written to disk by the extension.
+    </li>
+    <li>
+      Your <strong>Xero tokens</strong>, <strong>Xero organisation ID</strong>, your
+      saved <strong>account-to-contact matches</strong>, hidden accounts, and your
+      default invoice settings are held in your browser's local storage on your own device.
+    </li>
+    <li>
+      None of this data is transmitted to the developer or to any party other than
+      Script Sense and Xero themselves.
+    </li>
+  </ul>
+
+  <h2>Data sharing and sale</h2>
+  <p>
+    We do not sell, rent, or share your data with anyone. The extension transmits data
+    only to the Script Sense and Xero APIs, which are the services you are using it to
+    connect. We do not transfer your data to any other third party.
+  </p>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>The Script Sense session token is discarded when you close your browser.</li>
+    <li>
+      You can remove all locally stored data — Xero tokens, contact matches and settings —
+      at any time by removing the extension from Chrome, or by clearing the extension's
+      storage from your browser settings.
+    </li>
+    <li>
+      Disconnecting in Xero (<em>Settings → Connected apps</em>) revokes the extension's
+      access to your Xero organisation.
+    </li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>
+    Authentication with Xero uses OAuth 2.0 with PKCE; no Xero password or client secret
+    is stored in the extension. All communication with Script Sense and Xero is over HTTPS.
+  </p>
+
+  <h2>Children</h2>
+  <p>The extension is a business tool and is not directed at children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes, the updated version will be published at this URL with a new
+    "last updated" date.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy or the extension's handling of data:
+    <a href="mailto:kieran@scriptsense.co.nz">kieran@scriptsense.co.nz</a>.
+  </p>
+</body>
+</html>
